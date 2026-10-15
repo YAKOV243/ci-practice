@@ -16,3 +16,15 @@ def test_unknown_user():
 # בדיקה 4: סיסמה ריקה, אמור להיחסם (False)
 def test_empty_password():
     assert login("soldier1", "") == False
+
+# בדיקה 5: אותיות גדולות בשם משתמש צריכות להיחסם, כי הסיסמאות רגישות לאותיות
+def test_uppercase_user():
+    assert login("SOLDIER1", "pass123") == False
+
+# בדיקה 6: סיסמה של משתמש אחר צריכה להיחסם
+def test_other_users_password():
+    assert login("soldier1", "abc456") == False
+
+# בדיקה 7: משתמש שני עם סיסמה נכונה צריך להיכנס
+def test_second_user():
+    assert login("soldier2", "abc456") == True
