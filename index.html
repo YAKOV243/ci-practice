@@ -1,1 +1,17 @@
-<h1>Access granted</h1>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head><meta charset="utf-8"><title>מערכת כניסה</title></head>
+<body style="font-family:Arial;max-width:600px;margin:40px auto">
+<h1>מערכת בקרת כניסה</h1>
+<p>הדף הזה נבנה אוטומטית מתוצאות הפונקציה login.
+הוא עלה לאוויר רק כי כל הבדיקות עברו.</p>
+<table border="1" cellpadding="8">
+<tr><th>מקרה</th><th>תוצאה</th></tr><tr><td>חייל מורשה עם סיסמה נכונה</td><td>אושר ✔</td></tr><tr><td>חייל מורשה עם סיסמה שגויה</td><td>נדחה ✘</td></tr><tr><td>משתמש שלא קיים ברשימה</td><td>נדחה ✘</td></tr></table>
+<h2>איך זה עבד?</h2>
+<ol>
+<li>כתבנו קוד ובדיקות בענף נפרד</li>
+<li>דחפנו ל-GitHub, וה-CI הריץ את כל הבדיקות</li>
+<li>פתחנו Pull Request וצירפנו ל-main</li>
+<li>ה-CD פרסם את הדף הזה אוטומטית</li>
+</ol>
+</body></html>
